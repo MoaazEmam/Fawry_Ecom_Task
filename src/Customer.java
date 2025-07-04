@@ -42,15 +42,17 @@ public class Customer extends User{
             System.out.println("0. Exit");
             System.out.print("Choice: ");
             choice=scanner.nextLine();
-            int amount;
+            int amount=0;
             Product product=null;
             switch (choice){
                 case "1"->{
-                    System.out.println("How many do you want to add to your cart?");
-                    amount=scanner.nextInt();
-                    scanner.nextLine();
                     for (Product p:products){
-                        if(p.getName().equals("TV")) product=p;
+                        if(p.getName().equals("TV")){
+                            System.out.println("Price is: $"+ p.getPrice());
+                            System.out.println("How many do you want to add to your cart?");
+                            amount=scanner.nextInt();
+                            scanner.nextLine();
+                            product=p;}
                     }
                     if(product!=null) {
                         this.cart.addProduct(product, amount);
@@ -58,11 +60,14 @@ public class Customer extends User{
                     }
                 }
                 case "2"->{
-                    System.out.println("How many do you want to add to your cart?");
-                    amount=scanner.nextInt();
-                    scanner.nextLine();
+
                     for (Product p:products){
-                        if(p.getName().equals("Cheese")) product=p;
+                        if(p.getName().equals("Cheese")){
+                            System.out.println("Price is: $"+ p.getPrice());
+                        System.out.println("How many do you want to add to your cart?");
+                        amount=scanner.nextInt();
+                        scanner.nextLine();
+                        product=p;}
                     }
                     if(product!=null){
                         this.cart.addProduct(product, amount);
@@ -70,11 +75,13 @@ public class Customer extends User{
                     }
                 }
                 case "3"->{
-                    System.out.println("How many do you want to add to your cart?");
-                    amount=scanner.nextInt();
-                    scanner.nextLine();
                     for (Product p:products){
-                        if(p.getName().equals("Biscuits")) product=p;
+                        if(p.getName().equals("Biscuits")){
+                            System.out.println("Price is: $"+ p.getPrice());
+                            System.out.println("How many do you want to add to your cart?");
+                            amount=scanner.nextInt();
+                            scanner.nextLine();
+                            product=p;}
                     }
                     if(product!=null){
                         this.cart.addProduct(product, amount);
@@ -82,11 +89,13 @@ public class Customer extends User{
                     }
                 }
                 case "4"->{
-                    System.out.println("How many do you want to add to your cart?");
-                    amount=scanner.nextInt();
-                    scanner.nextLine();
                     for (Product p:products){
-                        if(p.getName().equals("MobileScratchCard")) product=p;
+                        if(p.getName().equals("MobileScratchCard")){
+                            System.out.println("Price is: $"+ p.getPrice());
+                            System.out.println("How many do you want to add to your cart?");
+                            amount=scanner.nextInt();
+                            scanner.nextLine();
+                            product=p;}
                     }
                     if(product!=null){
                         this.cart.addProduct(product, amount);
