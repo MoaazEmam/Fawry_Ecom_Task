@@ -52,8 +52,10 @@ public class Customer extends User{
                     for (Product p:products){
                         if(p.getName().equals("TV")) product=p;
                     }
-                    if(product!=null)
-                    this.cart.addProduct(product,amount);
+                    if(product!=null) {
+                        this.cart.addProduct(product, amount);
+                        product.reduceQuantity(amount);
+                    }
                 }
                 case "2"->{
                     System.out.println("How many do you want to add to your cart?");
@@ -62,8 +64,10 @@ public class Customer extends User{
                     for (Product p:products){
                         if(p.getName().equals("Cheese")) product=p;
                     }
-                    if(product!=null)
-                        this.cart.addProduct(product,amount);
+                    if(product!=null){
+                        this.cart.addProduct(product, amount);
+                        product.reduceQuantity(amount);
+                    }
                 }
                 case "3"->{
                     System.out.println("How many do you want to add to your cart?");
@@ -72,8 +76,10 @@ public class Customer extends User{
                     for (Product p:products){
                         if(p.getName().equals("Biscuits")) product=p;
                     }
-                    if(product!=null)
-                        this.cart.addProduct(product,amount);
+                    if(product!=null){
+                        this.cart.addProduct(product, amount);
+                        product.reduceQuantity(amount);
+                    }
                 }
                 case "4"->{
                     System.out.println("How many do you want to add to your cart?");
@@ -82,8 +88,10 @@ public class Customer extends User{
                     for (Product p:products){
                         if(p.getName().equals("MobileScratchCard")) product=p;
                     }
-                    if(product!=null)
-                        this.cart.addProduct(product,amount);
+                    if(product!=null){
+                        this.cart.addProduct(product, amount);
+                        product.reduceQuantity(amount);
+                    }
                 }
             }
             System.out.println("Ready to checkout? (Y for yes, N for no)");
