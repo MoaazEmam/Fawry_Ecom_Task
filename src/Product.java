@@ -14,7 +14,8 @@ public class Product {
 
     public void reduceQuantity(int amount){
         if(amount>this.quantity){
-            throw new IllegalArgumentException("Insufficient quantity");
+            System.out.println("Insufficient quantity");
+            return;
         } else quantity-=amount;
     }
 }
