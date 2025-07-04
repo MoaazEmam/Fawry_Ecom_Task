@@ -9,7 +9,9 @@ public class CheckoutService {
             return;
         }
 
-        double total= cart.getTotal();
+        double subtotal= cart.getTotal();
+        double shipping=30;
+        double total=subtotal+shipping;
         HashMap<Shippable,Integer> shippable=new HashMap<Shippable,Integer>();
         for (CartItem item: cart.getItems().values()){
             Product prod=item.getProduct();
@@ -44,9 +46,9 @@ public class CheckoutService {
             System.out.printf("%dx %s\t%.1fg\n",item.getQuantity(),item.getProduct().getName(),item.getTotal());
         }
         System.out.println("--------------------");
-        System.out.printf("Subtotal\t%.2f\n",total);
-        System.out.printf("Shipping\t%.2f\n",30);
-        System.out.printf("Amount\t%.2f\n",total+30);
+        System.out.printf("Subtotal\t%.2f\n",subtotal);
+        System.out.printf("Shipping\t%.2f\n",shipping);
+        System.out.printf("Amount\t%.2f\n",total);
         System.out.printf("New balance\t%.2f\n",customer.getBalance());
         cart.clear();
     }

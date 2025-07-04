@@ -34,6 +34,7 @@ public class Main {
                     password = scan.nextLine();
                     System.out.println("Enter the funds you want to add:");
                     funds = scan.nextDouble();
+                    scan.nextLine();
                     users.put(name,new Customer(name,password,funds));
                     System.out.println("Your account has been created, you can now log in and shop!");
                 }

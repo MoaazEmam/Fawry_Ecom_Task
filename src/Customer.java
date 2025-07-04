@@ -48,6 +48,7 @@ public class Customer extends User{
                 case "1"->{
                     System.out.println("How many do you want to add to your cart?");
                     amount=scanner.nextInt();
+                    scanner.nextLine();
                     for (Product p:products){
                         if(p.getName().equals("TV")) product=p;
                     }
@@ -57,6 +58,7 @@ public class Customer extends User{
                 case "2"->{
                     System.out.println("How many do you want to add to your cart?");
                     amount=scanner.nextInt();
+                    scanner.nextLine();
                     for (Product p:products){
                         if(p.getName().equals("Cheese")) product=p;
                     }
@@ -66,6 +68,7 @@ public class Customer extends User{
                 case "3"->{
                     System.out.println("How many do you want to add to your cart?");
                     amount=scanner.nextInt();
+                    scanner.nextLine();
                     for (Product p:products){
                         if(p.getName().equals("Biscuits")) product=p;
                     }
@@ -75,6 +78,7 @@ public class Customer extends User{
                 case "4"->{
                     System.out.println("How many do you want to add to your cart?");
                     amount=scanner.nextInt();
+                    scanner.nextLine();
                     for (Product p:products){
                         if(p.getName().equals("MobileScratchCard")) product=p;
                     }
@@ -84,7 +88,10 @@ public class Customer extends User{
             }
             System.out.println("Ready to checkout? (Y for yes, N for no)");
             choice=scanner.nextLine();
-            if(choice.equals("Y")) choice="0";
+            if(choice.equals("Y")) {
+                choice="0";
+                CheckoutService.checkout(this);
+            };
         } while(!choice.equals("0"));
     };
 }
