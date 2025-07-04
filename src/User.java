@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class User {
@@ -15,5 +16,5 @@ public abstract class User {
     public String getPassword(){return this.password;}
     public String getRole(){return this.role;}
 
-    public abstract void showMenu(Scanner scanner);
+    public abstract void showMenu(Scanner scanner,List<Product> products);
 }

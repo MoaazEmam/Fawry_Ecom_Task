@@ -47,7 +47,7 @@ public class CheckoutService {
         System.out.printf("Subtotal\t%.2f\n",total);
         System.out.printf("Shipping\t%.2f\n",30);
         System.out.printf("Amount\t%.2f\n",total+30);
-
+        System.out.printf("New balance\t%.2f\n",customer.getBalance());
         cart.clear();
     }
 }
